@@ -16,11 +16,11 @@ export default {
 
 <template>
   <basic-container class="file-upload-my">
-    <meting-js
-        server="netease"
-        type="playlist"
-        id="60198">
-    </meting-js>
+          <meting-js
+              server="netease"
+              type="playlist"
+              id="60198">
+          </meting-js>
   </basic-container>
 </template>
 
