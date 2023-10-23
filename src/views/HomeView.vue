@@ -18,7 +18,8 @@
       </el-row>
       <el-row>
         <el-col :span="24">
-            <el-button @click="$router.push('my-ssl')">
+            <el-button @click="$router.push('music')">
+              音乐播放器
             </el-button>
         </el-col>
       </el-row>

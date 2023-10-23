@@ -8,7 +8,17 @@
   </head>
   <body>
     <div id="app"></div>
-    <script  src="/live2d/live2d.js"></script>
+<!--    音乐播放器依赖 -->
+    <link rel="stylesheet" href="https://cdn.chrelyonly.cn/APlayer.min.css">
+    <script src="https://cdn.chrelyonly.cn/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://cdn.chrelyonly.cn/Meting.min.js"></script>
+    <meting-js
+            server="netease"
+            type="playlist"
+            fixed="true"
+            id="60198">
+    </meting-js>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
