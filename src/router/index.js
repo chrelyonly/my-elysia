@@ -9,6 +9,11 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
+    {
+        path: '/file-upload',
+        name: 'file-upload',
+        component: () => import('../views/file-upload/file-upload.vue')
+    },
   ]
 })
 
