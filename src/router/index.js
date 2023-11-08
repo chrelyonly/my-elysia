@@ -19,11 +19,16 @@ const router = createRouter({
         name: 'file-upload',
         component: () => import('../views/file-upload/file-upload.vue')
     },
-    {
-        path: '/music',
-        name: 'music',
-        component: () => import('../views/music/music.vue')
-    },
+      {
+          path: '/music',
+          name: 'music',
+          component: () => import('../views/music/music.vue')
+      },
+      {
+          path: '/moyu',
+          name: 'moyu',
+            component: () => import('../views/content/moyu.vue')
+      },
   ]
 })
 

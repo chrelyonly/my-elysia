@@ -25,9 +25,9 @@ import Locale from '@smallwei/avue/lib/locale/lang/zh'
 import '@smallwei/avue/lib/index.css';
 app.use(Avue,{locale: Locale})
 // 全局自定义组件
-import basicContainer from "@/components/basic-container/main.vue";
+import BasicContainer from "@/components/basic-container/main.vue";
 import basicBlock from "@/components/basic-block/main.vue";
-app.component('BasicContainer', basicContainer)
+app.component('BasicContainer', BasicContainer)
 app.component('basicBlock', basicBlock)
 // 引入时间扩展工具
 import "@/util/datePrototype"

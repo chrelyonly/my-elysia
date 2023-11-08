@@ -1,8 +1,9 @@
 <template>
   <div class="basic-container"
-       :style="styleName"
+       style="border-radius: 40px"
+
        :class="{'basic-container--block':block}">
-    <el-card class="basic-container__card">
+    <el-card class="basic-container__card" :style="styleName">
       <slot></slot>
     </el-card>
   </div>

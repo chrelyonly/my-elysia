@@ -1,4 +1,5 @@
 <script>
+
 export default {
   data(){
     return{
@@ -6,7 +7,9 @@ export default {
     }
   },
   methods: {
-
+    viewDetail(){
+      this.$router.push('moyu')
+    }
   }
 }
 </script>
@@ -71,7 +74,11 @@ export default {
               </el-row>
               <el-row class="el-row" :gutter="10">
                 <el-col :span="4">
-                  <div style="height:100px;width: 100%;background-color:red;border-radius: 10px"></div>
+                  <basicContainer>
+                    <div style="height:100px;width: 100%;;border-radius: 20px;text-align: center" @click="viewDetail('moyu')">
+                      摸鱼人日历
+                    </div>
+                  </basicContainer>
                 </el-col>
                 <el-col :span="4">
                   <div style="height:100px;width: 100%;background-color:red;border-radius: 10px"></div>
