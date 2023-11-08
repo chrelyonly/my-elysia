@@ -7,8 +7,8 @@ export default {
     }
   },
   methods: {
-    viewDetail(){
-      this.$router.push('moyu')
+    viewDetail(e){
+      this.$router.push(e)
     }
   }
 }
@@ -81,7 +81,11 @@ export default {
                   </basicContainer>
                 </el-col>
                 <el-col :span="4">
-                  <div style="height:100px;width: 100%;background-color:red;border-radius: 10px"></div>
+                  <basicContainer>
+                    <div style="height:100px;width: 100%;;border-radius: 20px;text-align: center" @click="viewDetail('my-minio-view')">
+                      自用图床图片预览
+                    </div>
+                  </basicContainer>
                 </el-col>
                 <el-col :span="4">
                   <div style="height:100px;width: 100%;background-color:red;border-radius: 10px"></div>

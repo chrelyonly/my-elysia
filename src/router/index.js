@@ -29,6 +29,11 @@ const router = createRouter({
           name: 'moyu',
             component: () => import('../views/content/moyu.vue')
       },
+      {
+          path: '/my-minio-view',
+          name: 'my-minio-view',
+            component: () => import('../views/content/my-minio-view.vue')
+      },
   ]
 })
 
