@@ -9,6 +9,11 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
+      {
+          path: '/admin',
+          name: 'admin',
+            component: () => import('../views/admin/admin.vue')
+      },
     {
         path: '/file-upload',
         name: 'file-upload',

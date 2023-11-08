@@ -12,15 +12,18 @@ const app = createApp(App)
 // 饿了么ui-plus
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
-app.use(ElementPlus)
+app.use(ElementPlus,{locale: zhCn})
 // avue组件
 import Avue from '@smallwei/avue';
+import Locale from '@smallwei/avue/lib/locale/lang/zh'
+// import Locale from '@smallwei/avue/lib/locale/lang/en'
 import '@smallwei/avue/lib/index.css';
-app.use(Avue)
+app.use(Avue,{locale: Locale})
 // 全局自定义组件
 import basicContainer from "@/components/basic-container/main.vue";
 import basicBlock from "@/components/basic-block/main.vue";

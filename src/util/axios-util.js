@@ -77,6 +77,10 @@ axios.interceptors.response.use(res => {
   //获取状态码
   const status = res.data.code || res.status;
   const message = res.data.msg || res.data.error_description || '未知错误';
+  if (status !== 200){
+    // 如果请求为非200否者默认统一处理
+    ElMessage.error(message);
+  }
   if (status >= 200 && status <= 500) {
     return res;
   }
