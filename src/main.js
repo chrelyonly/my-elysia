@@ -34,8 +34,46 @@ import "@/util/datePrototype"
 // 引入全局通用请求
 import {http} from '@/util/https.js';
 app.config.globalProperties.$https = http;
+// 引入全局mqtt
+import mqtt from "mqtt";
+import {SOCKET_SERVICE} from "@/util/mqtt";
+let mqttServer = null;
+try {
+  let userId =  new Date().Format("yyyyMMddhhmmssSSS");
+  mqttServer = mqtt.connect(SOCKET_SERVICE, {
+    username: "chrelyonly",
+    password: "chrelyonly"
+  });
+  // 用户订阅id
+  const singleTopic = "/userId" + userId;
+  // 在线人数订阅
+  const onlineUserNum = "/onlineUserNum";
+  // 聊天窗订阅
+  const tempVue = "/tempVue";
+  mqttServer.on("connect", () => {
+    console.log("连接成功");
+    mqttServer.subscribe(singleTopic, err => {
+      if (!err) {
+        console.log("订阅成功:" + singleTopic);
+      }
+    });
+    mqttServer.subscribe(onlineUserNum, err => {
+      if (!err) {
+        console.log("订阅成功:" + onlineUserNum);
+      }
+    });
+    mqttServer.subscribe(tempVue, err => {
+      if (!err) {
+        console.log("订阅成功:" + tempVue);
+      }
+    });
+  });
+  app.config.globalProperties.$mqttServer = mqttServer;
+}catch (e) {
+  console.log(e);
+  console.log("mqtt连接失败");
+}
 // 自定义结束 ************************************************************
 app.use(createPinia())
 app.use(router)
-
 app.mount('#app')

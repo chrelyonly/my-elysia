@@ -88,6 +88,13 @@ export default {
                   </basicContainer>
                 </el-col>
                 <el-col :span="4">
+                  <basicContainer>
+                    <div style="height:100px;width: 100%;;border-radius: 20px;text-align: center" @click="viewDetail('mqtt')">
+                      连接至MQTT协议
+                    </div>
+                  </basicContainer>
+                </el-col>
+                <el-col :span="4">
                   <div style="height:100px;width: 100%;background-color:red;border-radius: 10px"></div>
                 </el-col>
                 <el-col :span="4">

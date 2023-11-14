@@ -34,6 +34,11 @@ const router = createRouter({
           name: 'my-minio-view',
             component: () => import('../views/content/my-minio-view.vue')
       },
+      {
+          path: '/mqtt',
+            name: 'mqtt',
+            component: () => import('../views/content/mqtt.vue')
+      },
   ]
 })
 
