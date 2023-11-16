@@ -39,6 +39,17 @@ const router = createRouter({
             name: 'mqtt',
             component: () => import('../views/content/mqtt.vue')
       },
+      {
+          path: '/ssl',
+            name: 'ssl',
+            component: () => import('../views/content/ssl.vue')
+      },
+      // 测试专用
+      {
+          path: '/test',
+            name: 'test',
+            component: () => import('../views/content/test.vue')
+      },
   ]
 })
 
